@@ -13,8 +13,6 @@ BuildRequires:	perl
 Requires:	perl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 wmtheme is a command-line perl program to manage window manager
