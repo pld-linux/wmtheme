@@ -1,25 +1,15 @@
-diff -urN wmtheme-1.3.2.orig/Makefile wmtheme-1.3.2/Makefile
---- wmtheme-1.3.2.orig/Makefile	2001-12-09 05:11:28.000000000 +0100
-+++ wmtheme-1.3.2/Makefile	2003-09-18 04:00:22.541783008 +0200
-@@ -24,7 +24,7 @@
+--- wmtheme-1.3.3/Makefile.orig	2004-06-13 13:38:44.000000000 +0200
++++ wmtheme-1.3.3/Makefile	2004-06-13 13:42:39.000000000 +0200
+@@ -46,7 +46,7 @@
+   Makefile stubwm.pl make-wmtheme apply-gtk2-theme.c wminstallfonts \
+   wmtheme.spec.in make-rpm lsm.in
  
- BINDIR=$(prefix)/bin
- LIBDIR=$(prefix)/lib/wmtheme
--MANDIR=$(prefix)/man/man1
-+MANDIR=$(prefix)/share/man/man1
- DOCDIR=$(prefix)/doc/wmtheme-$(VERSION)
- 
- INSTALL=install -c
-@@ -44,7 +44,7 @@
-   stubwm.pl make-wmtheme make-lsm apply-gtk-theme.c wminstallfonts \
-   wmtheme.spec.in make-rpm
- 
--all: apply-gtk-theme manpage
-+all: apply-gtk-theme 
+-all: apply-gtk2-theme manpage
++all: apply-gtk2-theme 
  	PREFIX=$(prefix) $(PERL) ./make-wmtheme
  
- apply-gtk-theme: apply-gtk-theme.c
-@@ -60,13 +60,13 @@
+ apply-gtk2-theme: apply-gtk2-theme.c
+@@ -57,13 +57,13 @@
  	for SUPT in $(SUPPORTFILES) ; do \
  	  $(INSTALL) -m 644 $$SUPT $(DESTDIR)$(LIBDIR); \
  	done;
@@ -32,7 +22,7 @@ diff -urN wmtheme-1.3.2.orig/Makefile wmtheme-1.3.2/Makefile
 -	  if [ ! -e $(DESTDIR)$(MANDIR)/$$INVOCATION.1.gz ] ; then \
 -	    ln -s wmtheme.1.gz $(DESTDIR)$(MANDIR)/$$INVOCATION.1.gz; \
 +	  if [ ! -e $(DESTDIR)$(MANDIR)/$$INVOCATION.1 ] ; then \
-+	    echo ".so  wmtheme.1" > $(DESTDIR)$(MANDIR)/$$INVOCATION.1; \
++	    echo ".so wmtheme.1" > $(DESTDIR)$(MANDIR)/$$INVOCATION.1; \
  	  fi; \
  	done;
  	$(INSTALL) -m 755 wminstallfonts $(DESTDIR)$(BINDIR)
