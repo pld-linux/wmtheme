@@ -23,8 +23,8 @@ can be used to activate, install, uninstall, and list themes.
 
 %description -l pl
 wmtheme jest programem zarz±dzaj±cym tematami graficznymi. Posiada
-wsparcie dla AfterStep'a, Blackbox'a, Enlightenment'a, Golem'a, GTK+,
-IceWM'a, Oroborus'a, Sawfish'a, Window Maker'a i xmms'a. wmtheme mo¿e
+wsparcie dla AfterStep-a, Blackbox-a, Enlightenment-a, Golem-a, GTK+,
+IceWM-a, Oroborus-a, Sawfish-a, Window Maker-a i xmms-a. wmtheme mo¿e
 aktywowaæ, instalowaæ, odinstalowaæ i wy¶wietliæ listê dostêpnych
 tematów graficznych.
 
