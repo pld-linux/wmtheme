@@ -44,14 +44,12 @@ install -d $RPM_BUILD_ROOT%{_prefix}
 	DESTDIR=$RPM_BUILD_ROOT \
 	prefix=%{_prefix}
 
-gzip -9nf CHANGES CODING CREDITS README*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc CHANGES CODING CREDITS README*
 %attr(755,root,root) %{_bindir}/*
 %{_libdir}/wmtheme/
 %{_mandir}/man1/*
