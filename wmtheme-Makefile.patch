@@ -1,6 +1,15 @@
-diff -urN aaa/wmtheme-1.3.2/Makefile wmtheme-1.3.2/Makefile
---- aaa/wmtheme-1.3.2/Makefile	Sun Dec  9 05:11:28 2001
-+++ wmtheme-1.3.2/Makefile	Sun May  5 22:36:32 2002
+diff -urN wmtheme-1.3.2.orig/Makefile wmtheme-1.3.2/Makefile
+--- wmtheme-1.3.2.orig/Makefile	2001-12-09 05:11:28.000000000 +0100
++++ wmtheme-1.3.2/Makefile	2003-09-18 04:00:22.541783008 +0200
+@@ -24,7 +24,7 @@
+ 
+ BINDIR=$(prefix)/bin
+ LIBDIR=$(prefix)/lib/wmtheme
+-MANDIR=$(prefix)/man/man1
++MANDIR=$(prefix)/share/man/man1
+ DOCDIR=$(prefix)/doc/wmtheme-$(VERSION)
+ 
+ INSTALL=install -c
 @@ -44,7 +44,7 @@
    stubwm.pl make-wmtheme make-lsm apply-gtk-theme.c wminstallfonts \
    wmtheme.spec.in make-rpm
