@@ -1,0 +1,29 @@
+diff -urN aaa/wmtheme-1.3.2/Makefile wmtheme-1.3.2/Makefile
+--- aaa/wmtheme-1.3.2/Makefile	Sun Dec  9 05:11:28 2001
++++ wmtheme-1.3.2/Makefile	Sun May  5 22:36:32 2002
+@@ -44,7 +44,7 @@
+   stubwm.pl make-wmtheme make-lsm apply-gtk-theme.c wminstallfonts \
+   wmtheme.spec.in make-rpm
+ 
+-all: apply-gtk-theme manpage
++all: apply-gtk-theme 
+ 	PREFIX=$(prefix) $(PERL) ./make-wmtheme
+ 
+ apply-gtk-theme: apply-gtk-theme.c
+@@ -60,13 +60,13 @@
+ 	for SUPT in $(SUPPORTFILES) ; do \
+ 	  $(INSTALL) -m 644 $$SUPT $(DESTDIR)$(LIBDIR); \
+ 	done;
+-	$(INSTALL) -m 644 wmtheme.1.gz $(DESTDIR)$(MANDIR)
++	$(INSTALL) -m 644 wmtheme.1 $(DESTDIR)$(MANDIR)
+ 	for INVOCATION in $(INVOCATIONS); do \
+ 	  if [ ! -e $(DESTDIR)$(BINDIR)/$$INVOCATION ] ; then \
+ 	    ln -s wmtheme $(DESTDIR)$(BINDIR)/$$INVOCATION; \
+ 	  fi; \
+-	  if [ ! -e $(DESTDIR)$(MANDIR)/$$INVOCATION.1.gz ] ; then \
+-	    ln -s wmtheme.1.gz $(DESTDIR)$(MANDIR)/$$INVOCATION.1.gz; \
++	  if [ ! -e $(DESTDIR)$(MANDIR)/$$INVOCATION.1 ] ; then \
++	    echo ".so  wmtheme.1" > $(DESTDIR)$(MANDIR)/$$INVOCATION.1; \
+ 	  fi; \
+ 	done;
+ 	$(INSTALL) -m 755 wminstallfonts $(DESTDIR)$(BINDIR)
