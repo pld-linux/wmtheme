@@ -5,7 +5,7 @@ Version:	1.3.2
 Release:	1
 License:	GPL v2
 Group:		X11/Window Managers/Tools
-Source0:	http://belnet.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	b2ee65eb741fcc9318c0e181dd7fd68c
 Patch0:		%{name}-Makefile.patch
 URL:		http://wmtheme.sourceforge.net/
