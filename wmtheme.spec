@@ -1,16 +1,17 @@
+%include	/usr/lib/rpm/macros.perl
 Summary:	Window manager theme utility
 Summary(pl):	Narzêdzie do obs³ugi motywów graficznych
 Name:		wmtheme
-Version:	1.3.2
+Version:	1.3.3
 Release:	1
 License:	GPL v2
 Group:		X11/Window Managers/Tools
 Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	b2ee65eb741fcc9318c0e181dd7fd68c
+# Source0-md5:	e5fb31fcec80f326357ec8314eea0987
 Patch0:		%{name}-Makefile.patch
 URL:		http://wmtheme.sourceforge.net/
-BuildRequires:	perl
-Requires:	perl
+BuildRequires:	gtk+2-devel
+BuildRequires:	rpm-perlprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
@@ -33,6 +34,7 @@ motywów graficznych.
 
 %build
 %{__make} \
+	CFLAGS="%{rpmcflags}" \
 	prefix=%{_prefix}
 
 %install
@@ -41,6 +43,7 @@ install -d $RPM_BUILD_ROOT%{_prefix}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
+	MANDIR=%{_mandir}/man1 \
 	prefix=%{_prefix}
 
 %clean
