@@ -1,5 +1,5 @@
 Summary:	Window manager theme utility
-Summary(pl):	Narzêdzie do obs³ugi tematów graficznych
+Summary(pl):	Narzêdzie do obs³ugi motywów graficznych
 Name:		wmtheme
 Version:	1.3.2
 Release:	1
@@ -22,11 +22,11 @@ Golem, GTK+, IceWM, Oroborus, Sawfish, Window Maker, and xmms. wmtheme
 can be used to activate, install, uninstall, and list themes.
 
 %description -l pl
-wmtheme jest programem zarz±dzaj±cym tematami graficznymi. Posiada
+wmtheme jest programem zarz±dzaj±cym motywami graficznymi. Posiada
 wsparcie dla AfterStepa, Blackboksa, Enlightenmenta, Golema, GTK+,
 IceWM-a, Oroborusa, Sawfisha, Window Makera i xmms-a. wmtheme mo¿e
 aktywowaæ, instalowaæ, odinstalowaæ i wy¶wietliæ listê dostêpnych
-tematów graficznych.
+motywów graficznych.
 
 %prep
 %setup -q
