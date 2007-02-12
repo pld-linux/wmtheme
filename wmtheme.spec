@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Window manager theme utility
-Summary(pl):	Narzêdzie do obs³ugi motywów graficznych
+Summary(pl.UTF-8):   NarzÄ™dzie do obsÅ‚ugi motywÃ³w graficznych
 Name:		wmtheme
 Version:	1.3.3
 Release:	1
@@ -21,12 +21,12 @@ themes. There is support for AfterStep, Blackbox, Enlightenment,
 Golem, GTK+, IceWM, Oroborus, Sawfish, Window Maker, and xmms. wmtheme
 can be used to activate, install, uninstall, and list themes.
 
-%description -l pl
-wmtheme jest programem zarz±dzaj±cym motywami graficznymi. Posiada
+%description -l pl.UTF-8
+wmtheme jest programem zarzÄ…dzajÄ…cym motywami graficznymi. Posiada
 wsparcie dla AfterStepa, Blackboksa, Enlightenmenta, Golema, GTK+,
-IceWM-a, Oroborusa, Sawfisha, Window Makera i xmms-a. wmtheme mo¿e
-aktywowaæ, instalowaæ, odinstalowaæ i wy¶wietliæ listê dostêpnych
-motywów graficznych.
+IceWM-a, Oroborusa, Sawfisha, Window Makera i xmms-a. wmtheme moÅ¼e
+aktywowaÄ‡, instalowaÄ‡, odinstalowaÄ‡ i wyÅ›wietliÄ‡ listÄ™ dostÄ™pnych
+motywÃ³w graficznych.
 
 %prep
 %setup -q
