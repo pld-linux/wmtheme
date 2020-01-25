@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.perl
 Summary:	Window manager theme utility
 Summary(pl.UTF-8):	Narzędzie do obsługi motywów graficznych
 Name:		wmtheme
